@@ -13,7 +13,6 @@ window.onload = function() {
     randomCard();
   });
 
-  console.log("Hello Rigo from the console!");
   var sortBtn = document.getElementById("sort");
   sortBtn.addEventListener("click", function() {
     letrasANumeros();
@@ -69,31 +68,23 @@ function randomCard() {
 }
 
 function letrasANumeros() {
-  console.log(cardsArr);
-  console.log(cardsArr[0].numero);
   for (let i = 0; i <= cardsArr.length - 1; i++) {
     if (cardsArr[i].numero == "A") {
       cardsArr[i].numero = 14;
-      console.log(cardsArr[i].numero);
     }
     if (cardsArr[i].numero == "K") {
       cardsArr[i].numero = 13;
-      console.log(cardsArr[i].numero);
     }
     if (cardsArr[i].numero == "Q") {
       cardsArr[i].numero = 12;
-      console.log(cardsArr[i].numero);
     }
     if (cardsArr[i].numero == "J") {
       cardsArr[i].numero = 11;
-      console.log(cardsArr[i].numero);
     }
   }
-  console.log(cardsArr[0].numero);
 }
 
 const bubbleSort = arr => {
-  letrasANumeros();
   let wall = arr.length - 1; //we start the wall at the end of the array
   while (wall > 0) {
     let index = 0;
